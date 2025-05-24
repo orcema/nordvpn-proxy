@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 EXPOSE 1080
 EXPOSE 3128
@@ -12,7 +12,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get -y install \
     openvpn \
     squid \
     unzip \
-    wget
+    wget \
+    curl \
+    net-tools
+
 RUN apt-get -y clean
 
 WORKDIR /root
